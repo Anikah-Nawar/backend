@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dashboard_styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <title>BME680 Live Dashboard</title>
+
+</head>
+<body>
+
+<!-- Container for your Dashboard Content -->
+<!-- This div will contain ALL your existing dashboard HTML -->
+<!-- It will be shown when the user IS logged in -->
+
+    <!--Side menu-->
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1><img src="logo_shield.png" alt="EmberCure Logo" id="embercure" title="EmberCure Wildfire Prevention"></h1>
+        </div>
+        <!--<ul>
+            <li><span class="sidemenu_ops">Dashboard</span></li>
+            <li><a href="charts.html" class="sidemenu_ops">Trend chart</a></li>
+            <li ><a href="weather.html" class="sidemenu_ops">Weather</a></li>
+            <li ><a href="map.html" class="sidemenu_ops">Map</a></li>
+        </ul>-->
+        <!-- This is your sign-out button -->
+        <button id="logout-btn"><img src="logout_icon.png" id="logout_img" alt="logout" title="Logout"></button> 
+    </div>
+
+    <!--header-->
+    <div class="container">
+        <div class="header">
+            <h1 class="top_text">Dashboard</h1>
+            <select id="sensor-select">
+                <option value="">-- Please choose a sensor --</option>
+            </select>
+        </div>
+
+        <div class="content">
+            <div class="cards">
+                <!--Temperature-->
+                <div class="temp_card">
+                    <div class ="box">
+                        <!--<img src="temp.png" alt="">-->
+                        <h2 class="card_header">Temperature</h2>
+                        <p><span id="temp" class="sensor-value">--</span></p>
+                    </div>
+                </div>
+
+                <!--Humidity-->
+                <div class="hum_card">
+                    <div class ="box">
+                        <!--<img src="hum.png" alt="">-->
+                        <h2 class="card_header">Humidity</h2>
+                        <p><span id="hum" class="sensor-value">--</span></p>
+                        <p id="hum-status-text">Loading...</p>
+                    </div>
+                </div>
+
+                <!--Pressure-->
+                <div class="pressure_card">
+                    <div class ="box">
+                        <!--<img src="pressure.png" alt="">-->
+                        <h2 class="card_header">Pressure</h2>
+                        <p><span id="pressure" class="sensor-value">--</span></p>
+                        <p id="pressure-status-text">Loading...</p>
+                    </div>
+                </div>
+
+                <!--Gas-->
+                <!--<div class="gas_card">
+                    <div class ="box">
+                        <img src="gas.png" alt="">
+                        <h2 class="card_header">Gas Resistance</h2>
+                        <p><span id="gas" class="sensor-value">--</span></p>
+                    </div>
+                </div>-->
+
+                <!--wind-->
+                <div class="wind_card">
+                    <div class ="box">
+                        <h2 class="card_header">Wind</h2>
+                        <!--<img src="wind.png" width="70px" height = "40px" alt="">-->
+                        <p><span id="wind" class="value">--</span></p>
+                        <p><span id="wind_dir" class="value">--</span></p>
+                        <!--<p><span id="t" class="value">--</span></p>-->
+                    </div>
+                </div>
+
+                <!--IAQ-->
+                <div class="iaq_card">
+                    <div class ="box">
+                        <h2 class="card_header">IAQ</h2>
+                        <p><span id="iaq" class="sensor-value">--</span></p>
+                        <p id="iaq-status-text">Loading...</p>
+                        <canvas id="myGauge"></canvas>
+                    </div>
+                </div>
+
+                <!--Battery-->
+                <div class="battery_card">
+                    <div class ="box">
+                        <h2 class="card_header">Battery Percentage</h2>
+                        <canvas id="batteryChart"></canvas>
+                        <div class="battery-label" id="batteryLabel">0%</div>
+                    </div>
+                </div>
+
+                <!--Performance-->
+                <div class="perf_card">
+                    <div class ="box">
+                        <h2 class="card_header">Performance Percentage</h2>
+                        <canvas id="performanceChart"></canvas>
+                        <div class="perf-label" id="perfLabel">0%</div>
+                    </div>
+                </div>
+
+
+                <!-- Temperature -->
+                <div class="chart-card">
+                    <h2>Average Temperature (°C)</h2>
+                    <canvas id="tempChart"></canvas>
+                </div>
+
+                <!-- Humidity -->
+                <div class="chart-card">
+                    <h2>Average Humidity (%)</h2>
+                    <canvas id="humChart"></canvas>
+                </div>
+
+                <!-- Pressure -->
+                <div class="chart-card">
+                    <h2>Average Pressure (hPa)</h2>
+                    <canvas id="pressChart"></canvas>
+                </div>
+
+                <!-- IAQ -->
+                <div class="chart-card">
+                    <h2>Average IAQ</h2>
+                    <canvas id="iaqChart"></canvas>
+                </div>
+
+                <div id="map"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<script type="module" src="dashboard-logout.js"></script>
+<script src="map.js"></script>
+<script src="weather.js"></script>
+<script src="tempColor.js"></script>
+<script src="humidityStatus.js"></script>
+<script src="pressureStatus.js"></script>
+<script src="iaqStatus.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+<script src = "IAQGauge.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="graphs.js"></script>
+<script src="batteryChart.js"></script>
+<script src="performanceChart.js"></script>
+<script src="Dashboard.js"></script>
+</body>
+</html>

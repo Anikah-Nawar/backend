@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Chart_styles.css">
+    <title>BME680 Live Dashboard</title>
+
+</head>
+<body>
+
+<!--Side menu-->
+<div class="side-menu">
+    <div class="brand-name">
+        <h1><img src="logo.png" alt="" id="embercure"></h1>
+    </div>
+    <ul>
+        <li><a href="dashboard.html" class="sidemenu_ops">Dashboard</a></li>
+        <li><span class="sidemenu_ops">Trend chart<span></li>
+        <li ><a href="weather.html" class="sidemenu_ops">Weather</a></li>
+        <li ><a href="map.html" class="sidemenu_ops">Map</a></li>
+    </ul>
+    <button id="logout-btn">Logout</button>
+</div>
+
+<!--header-->
+<div class="container">
+    <div class="header">
+        <h1 class="top_text">24 Hr Average Sensor Readings</h1>
+    </div>
+    <div class="content">
+      <!-- Temperature -->
+      <div class="chart-card">
+        <h2>Average Temperature (°C)</h2>
+        <canvas id="tempChart"></canvas>
+      </div>
+
+      <!-- Humidity -->
+      <div class="chart-card">
+        <h2>Average Humidity (%)</h2>
+        <canvas id="humChart"></canvas>
+      </div>
+
+      <!-- Pressure -->
+      <div class="chart-card">
+        <h2>Average Pressure (hPa)</h2>
+        <canvas id="pressChart"></canvas>
+      </div>
+
+      <!-- IAQ -->
+      <div class="chart-card">
+        <h2>Average IAQ</h2>
+        <canvas id="iaqChart"></canvas>
+      </div>
+    </div>
+    
+</div>
+
+<script type="module" src="dashboard-logout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="graphs.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 42px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+}
+
+#embercure{
+    width: 200px;
+}
+
+h2{
+    font-size: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(255, 255, 255);
+}
+
+.side-menu{
+    position: fixed;
+    background: #191a1f;
+    width: 15vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+}
+
+.side-menu .brand-name{
+    height: 20vh;
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+}
+
+.side-menu .sidemenu_ops {
+    font-size: 24px;
+    padding: 10px 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu .sidemenu_ops:hover{
+    background: #6f1dbd;
+    color: #ffffff;
+}
+
+#logout-btn{
+    width: 50%;
+    margin: 8px 20px;
+    padding: 10px;
+    border: none;
+    background: #292852;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-top: auto;
+}
+
+#logout-btn:hover{
+    background:#6f1dbd;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 85vw;
+    min-height: 100vh;
+    background: #f2f5f1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 85vw;
+    height: 10vh;
+    background: #191a1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 #292852;
+}
+
+.container .header .top_text{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: 50px;
+}
+    
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background-image: linear-gradient(to top, #292852, #191a1f);
+    
+}
+
+.chart-card {
+  background-color: rgb(255,255,255,0.5);
+  max-width: 750px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgb(203, 228, 240), 0 6px 20px 0 rgba(0,0, 0, 0.19);
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+.chart-card h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1700px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .side-menu{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1700px){
+    .brand-name h1 img{
+        width: 200px;
+        height: 70px;
+    }
+
+    .container .content .cards{
+        justify-content: center;
+    }
+}

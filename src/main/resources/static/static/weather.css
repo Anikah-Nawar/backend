@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 42px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(115, 149, 241);
+    padding: 10px;
+}
+
+h2{
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(115, 149, 241);
+}
+
+.side-menu{
+    position: fixed;
+    background: #98cbec;
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+}
+
+.side-menu .brand-name{
+    height: 20vh;
+    padding: 5px 40px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+}
+
+.side-menu .sidemenu_ops {
+    font-size: 36px;
+    padding: 10px 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu .sidemenu_ops:hover{
+    background: white;
+    color: #90aed0;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    min-height: 100vh;
+    background: #f2f5f1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: #d3f3d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgb(203, 228, 240);
+}
+
+.container .header .top_text{
+    font-size: 42px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(115, 149, 241);
+    padding: 10px;
+    margin-left: 50px;
+}
+    
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background-image: linear-gradient(to top, #78b4f5, #d3f3d6);
+    
+}
+
+.container .content .cards{
+    padding: 20px 50px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .wind_card{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 50px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(203, 228, 240), 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 30px;
+}
+
+.card_header{
+    font-size: 30px;
+    color: rgb(115, 149, 241);
+    font-weight: bold;
+}
+
+#wind{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(134, 135, 161);
+}
+
+#wind_dir{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(134, 135, 161);
+}
+
+@media screen and (max-width: 1700px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .side-menu{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1700px){
+    .brand-name h1 img{
+        width: 200px;
+        height: 70px;
+    }
+
+    .container .content .cards{
+        justify-content: center;
+    }
+}

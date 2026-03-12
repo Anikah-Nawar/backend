@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #3a3a3a;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 42px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+}
+
+#embercure{
+    width: 50px;
+}
+
+#logout_img{
+    width: 50px;
+}
+
+h2{
+    font-size: 36px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(255, 255, 255);
+}
+
+.side-menu{
+    position: fixed;
+    background: #3a3a3a;
+    width: 4vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+}
+
+.side-menu .brand-name{
+    padding: 1px 1px;
+    display: flex;
+    align-items:start;
+    justify-content:start;
+}
+
+.side-menu .sidemenu_ops {
+    font-size: 24px;
+    padding: 10px 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu .sidemenu_ops:hover{
+    background: #6f1dbd;
+    color: #ffffff;
+}
+
+#logout-btn{
+    width: 55px;
+    margin: 4px 4px;
+    padding: 1px;
+    display: flex;
+    border: none;
+    background: #292852;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+#logout-btn:hover{
+    background:#6f1dbd;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 95.5vw;
+    background: #f2f5f1;
+    display: flex;
+    flex-direction:column;
+}
+
+.container .header{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 95.5vw;
+    height: 10vh;
+    background: #2C2C2C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .header .top_text{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: 50px;
+}
+    
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+    background: #2C2C2C;
+    display: flex;
+    flex-direction:column;
+    background-size: cover;
+}
+
+.container .content .cards{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card{
+    width: 250px;
+    height: 350px;
+    background: white;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(203, 228, 240), 0 6px 20px 0 rgba(15, 210, 245, 0.452);
+}
+
+.container .content .cards .temp_card{
+    width: 150px;
+    height: 100px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+
+.container .content .cards .hum_card{
+    width: 150px;
+    height: 100px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.container .content .cards .pressure_card{
+    width: 150px;
+    height: 120px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.container .content .cards .gas_card{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 50px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(203, 228, 240), 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 30px;
+}
+
+.container .content .cards .iaq_card{
+    width: 150px;
+    height: 200px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.container .content .cards .battery_card{
+    width: 190px;
+    height: 200px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.container .content .cards .perf_card{
+    width: 190px;
+    height: 200px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.card_header{
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.sensor-value {
+    font-size: 16px;
+    color: rgb(241, 241, 241);
+    transition: opacity 0.5s ease-in-out; /* smooth fade */
+    opacity: 1;
+}
+
+
+#sensor-select {
+  position: absolute;
+  right: 100px;
+  /* Box model */
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+  /* Typography */
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgb(134, 135, 161);
+
+  /* Background */
+  background-color: #f9f9f9;
+
+  /* Cursor */
+  cursor: pointer;
+}
+
+/* Style the options within the dropdown */
+#sensor-select option {
+  background-color: #fff;
+  color: rgb(134, 135, 161);
+  padding: 5px;
+}
+
+#temp{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(253, 253, 253);
+    font-weight: bolder;
+}
+
+#hum{
+    font-size: 18px;
+    color: rgb(253, 253, 253);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#pressure{
+    font-size: 18px;
+    color: rgb(253, 253, 253);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#gas{
+    font-size: 20px;
+    color: rgb(253, 253, 253);
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+#iaq{
+    font-size: 20px;
+    color: rgb(253, 253, 253);
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 2px #ffffff;
+}
+
+#hum-status-text {
+  font-size: 16px;
+  margin-top: 10px;
+  color: rgb(253, 253, 253);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+#pressure-status-text {
+  font-size: 16px;
+  margin-top: 10px;
+  color: rgb(253, 253, 253);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+#iaq-status-text {
+  font-size: 16px;
+  margin-top: 10px;
+  color: rgb(253, 253, 253);
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+#myGauge{
+    width: 100px !important;
+    height: 50px !important;
+    margin-top: 10px;
+    display: flex;
+}
+
+.container .content .cards .battery_card .box .battery-label {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -200%);
+      font-size: 18px;
+      color: rgb(253, 253, 253);
+}
+
+#batteryChart {
+    position: relative;
+    transform: translate(27%, 10%);
+    width: 90px !important;
+    height: 90px !important;
+    display: flex;
+}
+
+.container .content .cards .perf_card .box .perf-label {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -200%);
+      font-size: 18px;
+      color: rgb(253, 253, 253);
+}
+
+#performanceChart {
+    position: relative;
+    transform: translate(27%, 10%);
+    width: 90px !important;
+    height: 90px !important;
+    display: flex;
+}
+
+#map { 
+    height: 300px; 
+    width: 750px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.chart-card {
+  background-color: #3a3a3a;
+  width: 500px;
+  padding: 20px;
+  margin: 10px 10px;
+  margin-top:5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+.chart-card h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+#wind{
+    font-size: 18px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+#wind_dir{
+    font-size: 16px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.container .content .cards .wind_card{
+    width: 150px;
+    height: 100px;
+    background-color: #3a3a3a;
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #3a3a3a, 0 6px 20px 0 rgba(0,0, 0, 0.19);
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 1700px){
+    .side-menu li{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .side-menu{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1700px){
+    #embercure{
+        width: 20px;
+    }
+
+    #logout-btn{
+        width: 30px;
+    }
+
+    #logout_img{
+        width: 30px;
+    }
+
+    .container .content .cards{
+        justify-content: center;
+    }
+}

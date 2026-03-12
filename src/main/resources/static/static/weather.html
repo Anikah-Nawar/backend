@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>BME680 Live Dashboard</title>
+
+</head>
+<body>
+
+<!--Side menu-->
+<div class="side-menu">
+    <div class="brand-name">
+        <h1><img src="logo.png" alt=""></h1>
+    </div>
+    <ul>
+        <li><a a href="dashboard.html"class="sidemenu_ops">Dashboard</a></li>
+        <li ><a href="charts.html" class="sidemenu_ops">Trend chart</a></li>
+        <li ><span class="sidemenu_ops">Weather</span></li>
+        <li ><a href="map.html" class="sidemenu_ops">Map</a></li>
+    </ul>
+</div>
+
+<!--header-->
+<div class="container">
+    <div class="header">
+        <h1 class="top_text">Weather Readings</h1>
+    </div>
+
+    <div class="content">
+        <div class="cards">
+            <!--wind-->
+            <div class="wind_card">
+                <div class ="box">
+                    <h2 class="card_header">Wind</h2>
+                    <img src="wind.png" width="70px" height = "40px" alt="">
+                    <p><span id="wind" class="value">--</span></p>
+                    <p><span id="wind_dir" class="value">--</span></p>
+                    <!--<p><span id="t" class="value">--</span></p>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="weather.js"></script>
+
+</body>
+</html>

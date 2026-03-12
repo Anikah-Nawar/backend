@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <title>BME680 Live Dashboard</title>
+
+</head>
+<body>
+
+<!--Side menu-->
+<div class="side-menu">
+    <div class="brand-name">
+        <h1><img src="logo.png" alt="" id="embercure"></h1>
+    </div>
+    <ul>
+        <li><a a href="dashboard.html"class="sidemenu_ops">Dashboard</a></li>
+        <li ><a href="charts.html" class="sidemenu_ops">Trend chart</a></li>
+        <li ><a href="weather.html" class="sidemenu_ops">Weather</a></li>
+        <li ><span class="sidemenu_ops">Map</span></li>
+    </ul>
+    <button id="logout-btn">Logout</button>
+</div>
+
+<!--header-->
+<div class="container">
+    <div class="header">
+        <h1 class="top_text">Map Of Sensors</h1>
+    </div>
+
+    <div class="content">
+        <div id="map"></div>
+    </div>
+</div>
+
+<script type="module" src="dashboard-logout.js"></script>
+<script src="map.js"></script>
+
+</body>
+</html>
